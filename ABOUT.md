@@ -4,12 +4,20 @@ A workflow that preps yeast libraries for NGS using qPCR [[Download](aq-amplicon
 
 &copy; University of Washington
 
+### Keywords
+Aquarium, Protocol, Next Generation Sequencing, qPCR
 
 ### Maintainer
 - Devin Strickland, <dvn.strcklnd@gmail.com>
 
 ### Authors
   - Devin Strickland, University of Washington
+  - Sarah Goldberg, University of Washington
+  - Abe Miller, University of Washington
+
+### Acknowledgements
+  - Sam Halabiya, University of Washington
+  - Cami Cordray, University of Washington
 
 ### Acknowledgements
 
