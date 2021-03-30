@@ -1,0 +1,19 @@
+{
+  "name": "50 mL Agarose Gel in Gel Box",
+  "description": "Used to run gels",
+  "min": 0,
+  "max": 100,
+  "handler": "collection",
+  "safety": "No safety information",
+  "clean up": "No cleanup information",
+  "data": "No data",
+  "vendor": "No vendor information",
+  "unit": "box",
+  "cost": 0.01,
+  "release method": "return",
+  "release description": "",
+  "image": "",
+  "prefix": "",
+  "rows": 2,
+  "columns": 6
+}

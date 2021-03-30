@@ -1,0 +1,32 @@
+{
+  "name": "Pour Gels (copy)",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [
+    {
+      "name": "Gel Type",
+      "part": false,
+      "array": false,
+      "routing": null,
+      "allowable_field_types": []
+    },
+    {
+      "name": "Percentage",
+      "part": false,
+      "array": false,
+      "routing": null,
+      "allowable_field_types": []
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Gel (array)",
+      "part": true,
+      "array": false,
+      "routing": "G",
+      "allowable_field_types": []
+    }
+  ],
+  "on_the_fly": false,
+  "user_id": 209
+}

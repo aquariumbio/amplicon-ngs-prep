@@ -1,0 +1,35 @@
+{
+  "name": "Dilute to 4nM",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [
+    {
+      "name": "DNA library in",
+      "part": null,
+      "array": null,
+      "routing": "L",
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Illuminated Fragment Library"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "DNA library out",
+      "part": null,
+      "array": null,
+      "routing": "L",
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Illuminated Fragment Library"
+        }
+      ]
+    }
+  ],
+  "on_the_fly": null,
+  "user_id": 209
+}

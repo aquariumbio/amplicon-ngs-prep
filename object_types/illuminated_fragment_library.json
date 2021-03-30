@@ -1,0 +1,19 @@
+{
+  "name": "Illuminated Fragment Library",
+  "description": "A special case of dsDNA fragment that contains many unique sequences and adapters for Illumina sequencing",
+  "min": 0,
+  "max": 1,
+  "handler": "sample_container",
+  "safety": "No safety information",
+  "clean up": "No cleanup information",
+  "data": "No data",
+  "vendor": "No vendor information",
+  "unit": "DNA Library",
+  "cost": 0.01,
+  "release method": "return",
+  "release description": "",
+  "image": "",
+  "prefix": "M20",
+  "rows": null,
+  "columns": null
+}

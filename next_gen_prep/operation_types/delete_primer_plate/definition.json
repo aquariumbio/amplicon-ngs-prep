@@ -1,0 +1,17 @@
+{
+  "name": "Delete Primer Plate",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [
+    {
+      "name": "Collection id",
+      "part": false,
+      "array": false,
+      "routing": null,
+      "allowable_field_types": []
+    }
+  ],
+  "outputs": [],
+  "on_the_fly": false,
+  "user_id": 214
+}

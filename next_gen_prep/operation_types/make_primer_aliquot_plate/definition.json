@@ -1,0 +1,9 @@
+{
+  "name": "Make Primer Aliquot Plate",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [],
+  "outputs": [],
+  "on_the_fly": null,
+  "user_id": 211
+}

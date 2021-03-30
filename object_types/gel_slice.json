@@ -1,0 +1,19 @@
+{
+  "name": "Gel Slice",
+  "description": "Gel Slice cut from a gel lane after gel was run. Often placed in a 1.5 mL tube.",
+  "min": 0,
+  "max": 1000,
+  "handler": "sample_container",
+  "safety": "No safety information",
+  "clean up": "No cleanup information",
+  "data": "No data",
+  "vendor": "No vendor information",
+  "unit": "Fragment",
+  "cost": 10.0,
+  "release method": "dispose",
+  "release description": "",
+  "image": "",
+  "prefix": "M20",
+  "rows": null,
+  "columns": null
+}

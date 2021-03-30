@@ -1,0 +1,49 @@
+{
+  "name": "KAPA Pure Beads",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [
+    {
+      "name": "DNA",
+      "part": null,
+      "array": null,
+      "routing": "D",
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Fragment Library"
+        }
+      ]
+    },
+    {
+      "name": "Microliters To Process",
+      "part": null,
+      "array": null,
+      "routing": null,
+      "allowable_field_types": []
+    },
+    {
+      "name": "Retention Limit",
+      "part": null,
+      "array": null,
+      "routing": null,
+      "allowable_field_types": []
+    }
+  ],
+  "outputs": [
+    {
+      "name": "DNA",
+      "part": null,
+      "array": null,
+      "routing": "D",
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Fragment Library"
+        }
+      ]
+    }
+  ],
+  "on_the_fly": null,
+  "user_id": 211
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Denature & Dilute Libraries",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [
+    {
+      "name": "DNA Library Array",
+      "part": null,
+      "array": true,
+      "routing": null,
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Illuminated Fragment Library"
+        }
+      ]
+    },
+    {
+      "name": "Percentage PhiX",
+      "part": null,
+      "array": null,
+      "routing": null,
+      "allowable_field_types": []
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Pooled DNA Library",
+      "part": null,
+      "array": null,
+      "routing": "P",
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Normalized Illuminated Fragment Library"
+        }
+      ]
+    }
+  ],
+  "on_the_fly": null,
+  "user_id": 228
+}

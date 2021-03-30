@@ -1,0 +1,35 @@
+{
+  "name": "Digest Genomic DNA",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [
+    {
+      "name": "Zymoprepped sample",
+      "part": null,
+      "array": null,
+      "routing": null,
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Plasmid Library"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Exonucleased sample",
+      "part": null,
+      "array": null,
+      "routing": null,
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Post-exonuclease"
+        }
+      ]
+    }
+  ],
+  "on_the_fly": null,
+  "user_id": 293
+}
