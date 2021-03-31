@@ -23,9 +23,9 @@ class Protocol
   TOLERANCE = 0.1 # allowed error in concentration
   FINAL_NMOL_PER_UL = (6 / 1e6) # target concentration, 4nM is 4/1e6 nmol/uL
 
-  TEST_CONCENTRATIONS = [0.5, 0.6, 0.7, 0.719, 0.72, 0.8, 0.9, 1.0, 2.0, 4.0].freeze # used for debug
-  TEST_BINS = %w[P1 P2 P3 P4 P5 P6 P7 P8 pos neg].freeze # used for debug
-  TEST_BARCODES = %w[AAAAA TTTTT GGGGG CCCCC ATATAT CGCGCG ACACAC TGTGTG ATCGAT TGCATG].freeze # used for debug
+  TEST_CONCENTRATIONS = [0.5, 0.6, 0.7, 0.719, 0.72, 0.8, 0.9, 1.0, 2.0, 4.0] # used for debug
+  TEST_BINS = %w[P1 P2 P3 P4 P5 P6 P7 P8 pos neg] # used for debug
+  TEST_BARCODES = %w[AAAAA TTTTT GGGGG CCCCC ATATAT CGCGCG ACACAC TGTGTG ATCGAT TGCATG] # used for debug
 
   def main
     associate_random_barcodes(operations: operations, in_handle: IN) if debug
@@ -42,34 +42,36 @@ class Protocol
       end
     end
 
+    # TODO: Bypassing this code for now. Need to re-implement using OperationHistory
     # get lengths of all fragments
-    operations.each do |op|
-      next if op.input(IN).sample.nil?
+    # operations.each do |op|
+    #   next if op.input(IN).sample.nil?
 
-      nm = SampleType.find(op.input(IN).sample.sample_type_id).name # sample type
-      case nm
-      when 'DNA Library' # should have "Library Stock" object_type with associated "length"
-        stock = find(:item, object_type: { name: 'Library Stock' },
-                            sample: { name: op.input(IN).sample.name }).first
-        op.temporary[:length] = stock.get(:length) unless stock.nil?
-      end
-    end
+    #   nm = SampleType.find(op.input(IN).sample.sample_type_id).name # sample type
+    #   case nm
+    #   when 'DNA Library' # should have "Library Stock" object_type with associated "length"
+    #     stock = find(:item, object_type: { name: 'Library Stock' },
+    #                         sample: { name: op.input(IN).sample.name }).first
+    #     op.temporary[:length] = stock.get(:length) unless stock.nil?
+    #   end
+    # end
 
     # ask tech to enter missing lengths
-    length_unknown = operations.select { |op| op.temporary[:length].nil? }
-    if length_unknown.any?
-      # get lengths for all samples for which length is not defined - ideally this should not be needed!!!
-      show do
-        title 'Enter the expected lengths in bp for these samples:'
-        note 'Ask a lab manager if you do not know'
-        table length_unknown.start_table
-                            .custom_column(heading: 'Sample Name', checkable: true) { |op| op.input(IN).sample.name }
-                            .get(:length, type: 'number', heading: 'Expected length (bp)', default: 1)
-                            .end_table
-      end
+    # length_unknown = operations.select { |op| op.temporary[:length].nil? }
+    uniq_sample_ops = operations.uniq { |op| op.input(IN).sample }.extend(OperationList)
+    # get lengths for all samples for which length is not defined - ideally this should not be needed!!!
+    show do
+    title 'Enter the expected lengths in bp for these samples:'
+    note 'Ask a lab manager if you do not know'
+    table uniq_sample_ops.start_table
+                         .custom_column(heading: 'Sample Name', checkable: true) { |op| op.input(IN).sample.name }
+                         .get(:length, type: 'number', heading: 'Expected length (bp)', default: 1)
+                         .end_table
     end
-    operations.each do |op|
-      op.input(IN).item.associate :length, op.temporary[:length]
+
+    uniq_sample_ops.each do |uso|
+        uso_sample_ops = operations.select { |op| op.input(IN).sample == uso.input(IN).sample }
+        uso_sample_ops.each { |op| op.input(IN).item.associate :length, uso.temporary[:length] }
     end
 
     # get rid of operations with no concentration or length
@@ -191,16 +193,10 @@ class Protocol
       title 'List of 4nM outputs'
       table operations.start_table
                       .output_item(OUT, heading: 'DNA Library (output)')
-                      .custom_column(heading: 'name', checkable: false) do |op|
-        op.output(OUT).item.sample.name.to_s
-      end
-        .custom_column(heading: 'bin', checkable: false) do |op|
-        op.output(OUT).item.get(:bin) || 'N/A'
-      end
-        .custom_column(heading: 'Illumina index', checkable: false) do |op|
-        op.output(OUT).item.get(:barcode) || 'N/A'
-      end
-        .end_table
+                      .custom_column(heading: 'name', checkable: false) { |op| op.output(OUT).item.sample.name.to_s }
+                      .custom_column(heading: 'bin', checkable: false) { |op| op.output(OUT).item.get(:bin) || 'N/A' }
+                      .custom_column(heading: 'Illumina index', checkable: false) { |op| op.output(OUT).item.get(:barcode) || 'N/A' }
+                      .end_table
     end
 
     operations.store
