@@ -1,0 +1,16 @@
+{
+  "name": "Get Metadata",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [
+    {
+      "name": "DNA Library",
+      "part": null,
+      "array": null,
+      "routing": "D"
+    }
+  ],
+  "outputs": [],
+  "on_the_fly": null,
+  "user_id": 211
+}

@@ -1,0 +1,183 @@
+{
+  "result": "ok",
+  "message": "test complete",
+  "error": null,
+  "log": [
+    "Hello from Nemo"
+  ],
+  "backtrace": [
+    {
+      "operation": "initialize",
+      "arguments": {
+        "operation_type_id": 506
+      },
+      "time": "2021-04-22T17:17:27.533+00:00"
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "<span style=\"background-color:yellow\">INSPECTING  (Array)</span>"
+        },
+        {
+          "note": "[\"Sales Order\",\"Reference\",\"Manufacturing ID\",\"Product\",\"Purification\",\"Sequence Name\",\"Sequence Notes\",\"Unit Size\",\"Bases\",\"Sequence\",\"Anhydrous Molecular Weight\",\"nmoles/OD\",\"ug/OD\",\"Extinction Coefficient\",\"GC Content\",\"Tm (50mM NaCl) C\",\"Modifications and Services\",\"Final OD\",\"nmoles\",\"Conc\",\"Volume\",\"Buffer\",\"Print Date\",\"Well Position\"]"
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:30.725+00:00",
+      "inputs": {
+        "timestamp": 1619111850000
+      }
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "<span style=\"background-color:yellow\">INSPECTING  (Hash)</span>"
+        },
+        {
+          "note": "{\"Sales Order\":\"16760408\",\"Reference\":\"269997216\",\"Manufacturing ID\":\"328716231\",\"Product\":\"100 nmole DNA Plate Oligo\",\"Purification\":\"Standard Desalting\",\"Sequence Name\":\"P7_Rev_8bp_BIOFAB_1\",\"Sequence Notes\":\"\",\"Unit Size\":\"0.1\",\"Bases\":\"62\",\"Sequence\":\"CAAGCAGAAGACGGCATACGAGATGTCGGTAAGTGACTGGAGTTCAGACGTGTGCTCTTCCG\",\"Anhydrous Molecular Weight\":\"19247.5\",\"nmoles/OD\":\"1.63934426229508\",\"ug/OD\":\"31.5532459016394\",\"Extinction Coefficient\":\"610000\",\"GC Content\":\"53.2258064516129\",\"Tm (50mM NaCl) C\":\"70.8802123084764\",\"Modifications and Services\":\"Standard Desalting\",\"Final OD\":\"N/A\",\"nmoles\":\"100uM in 799uLIDTE Buffer pH 8.0\",\"Conc\":\"100uM\",\"Volume\":\"799uL\",\"Buffer\":\"IDTE Buffer pH 8.0\",\"Print Date\":\"4/14/2021 4:55:00 PM\",\"Well Position\":\"A01\"}"
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:30.728+00:00",
+      "inputs": {
+        "timestamp": 1619111850000
+      }
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "<span style=\"background-color:yellow\">INSPECTING  (Sample)</span>"
+        },
+        {
+          "note": "{\"id\":36696,\"name\":\"P7_Rev_8bp_BIOFAB_1\",\"sample_type_id\":1,\"project\":\"SD2\",\"created_at\":\"2021-04-22T10:14:31.000-07:00\",\"updated_at\":\"2021-04-22T10:14:31.000-07:00\",\"user_id\":211,\"description\":\"New sample type description\",\"data\":null}"
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:31.299+00:00",
+      "inputs": {
+        "timestamp": 1619111851000
+      }
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "<span style=\"background-color:yellow\">INSPECTING  (String)</span>"
+        },
+        {
+          "note": "\"CAAGCAGAAGACGGCATACGAGAT gtcggtaa GTGACTGGAGTTCAGACGTGTGCTCTTCCG\""
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:31.715+00:00",
+      "inputs": {
+        "timestamp": 1619111851000
+      }
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "<span style=\"background-color:yellow\">INSPECTING  (Sample)</span>"
+        },
+        {
+          "note": "{\"id\":36697,\"name\":\"P7_Rev_8bp_BIOFAB_2\",\"sample_type_id\":1,\"project\":\"Primer Plate\",\"created_at\":\"2021-04-22T10:17:31.179-07:00\",\"updated_at\":\"2021-04-22T10:17:31.179-07:00\",\"user_id\":211,\"description\":\"100 nmole DNA Plate Oligo, Standard Desalting, 100uM in IDTE Buffer pH 8.0\",\"data\":null}"
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:31.762+00:00",
+      "inputs": {
+        "timestamp": 1619111851000
+      }
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "<span style=\"background-color:yellow\">INSPECTING  (String)</span>"
+        },
+        {
+          "note": "\"CAAGCAGAAGACGGCATACGAGATAGGTCACTGTGACTGGAGTTCAGACGTGTGCTCTTCCG\""
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:32.000+00:00",
+      "inputs": {
+        "timestamp": 1619111852000
+      }
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "<span style=\"background-color:yellow\">INSPECTING  (Sample)</span>"
+        },
+        {
+          "note": "{\"id\":36698,\"name\":\"P7_Rev_8bp_BIOFAB_3\",\"sample_type_id\":1,\"project\":\"Primer Plate\",\"created_at\":\"2021-04-22T10:17:31.229-07:00\",\"updated_at\":\"2021-04-22T10:17:31.229-07:00\",\"user_id\":211,\"description\":\"100 nmole DNA Plate Oligo, Standard Desalting, 100uM in IDTE Buffer pH 8.0\",\"data\":null}"
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:32.004+00:00",
+      "inputs": {
+        "timestamp": 1619111852000
+      }
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "<span style=\"background-color:yellow\">INSPECTING  (String)</span>"
+        },
+        {
+          "note": "\"CAAGCAGAAGACGGCATACGAGATGAATCCGAGTGACTGGAGTTCAGACGTGTGCTCTTCCG\""
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:32.098+00:00",
+      "inputs": {
+        "timestamp": 1619111852000
+      }
+    },
+    {
+      "operation": "display",
+      "content": [
+        {
+          "title": "Primer Plate Creation Successful!"
+        },
+        {
+          "note": "Please label the 96-Well Primer Stock Plate with Item ID <a href='#' onclick='open_item_ui(516755)'>516755</a>."
+        }
+      ]
+    },
+    {
+      "operation": "next",
+      "time": "2021-04-22T17:17:34.362+00:00",
+      "inputs": {
+        "timestamp": 1619111854000
+      }
+    },
+    {
+      "operation": "complete",
+      "rval": {}
+    }
+  ]
+}
