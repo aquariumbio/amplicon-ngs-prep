@@ -1,8 +1,10 @@
 # typed: false
 # frozen_string_literal: true
 
-needs 'Standard Libs/ProvenanceFinder'
+needs 'Standard Libs/OperationHistory'
 needs 'Standard Libs/Debug'
+needs 'Sample Models/Primer'
+needs 'Standard Libs/IlluminaAdapterSequence'
 
 class Protocol
   include Debug
@@ -23,7 +25,7 @@ class Protocol
 
     metadata_table = build_metadata_table(operation_histories: operation_histories)
     show do
-      title 'Demo Table'
+      title 'Metadata Table'
 
       table metadata_table
     end
@@ -32,7 +34,7 @@ class Protocol
   end
 
   def build_metadata_table(operation_histories:)
-    header = %w[item_id] + metadata_keys.map(&:first)
+    header = %w[item_id] + metadata_keys.map(&:first) + %w[barcode]
     metadata_table = [header]
 
     operation_histories.each do |item_id, operation_history|
@@ -44,6 +46,23 @@ class Protocol
 
   def build_row(item_id:, operation_history:)
     row = [Item.find(item_id).to_s]
+    row += metadata_from_keys(operation_history: operation_history)
+    row += barcode_from_primers(operation_history: operation_history)
+    row
+  end
+
+  def barcode_from_primers(operation_history:)
+    primer_names = operation_history.fetch_data('forward_primer')
+    primer_names += operation_history.fetch_data('reverse_primer')
+    sample_type = SampleType.find_by_name('Primer')
+    primer_samples = Sample.where(name: primer_names, sample_type: sample_type)
+    primers = primer_samples.map { |s| Primer.new(sample: s) }
+    barcodes = primers.map { |p| IlluminaAdapterSequence.new(sequence: p.sequence).barcode }
+    barcodes.compact
+  end
+
+  def metadata_from_keys(operation_history:)
+    row = []
     metadata_keys.each do |k, u|
       d = operation_history.fetch_data(k)
       d.uniq! if u == 'unique'
@@ -59,8 +78,7 @@ class Protocol
       %w[protease_concentration not_unique],
       %w[sort_count unique],
       %w[frac_positive unique],
-      %w[software_tube_id unique],
-      %w[barcode unique]
+      %w[software_tube_id unique]
     ]
   end
 
@@ -77,14 +95,9 @@ class Protocol
 
   def test_items
     Item.find([
-                486_207,
-                486_208,
-                486_209,
-                486_210,
-                486_211,
-                486_212,
-                486_213,
-                486_214
+                432266,
+                432267,
+                432268
               ])
   end
 end
