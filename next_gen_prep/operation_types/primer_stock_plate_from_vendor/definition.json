@@ -1,0 +1,9 @@
+{
+  "name": "Primer Stock Plate From Vendor",
+  "parent_class": "OperationType",
+  "category": "Next Gen Prep",
+  "inputs": [],
+  "outputs": [],
+  "on_the_fly": false,
+  "user_id": 211
+}
