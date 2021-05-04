@@ -7,7 +7,16 @@
       "name": "DNA Library",
       "part": null,
       "array": null,
-      "routing": "D"
+      "routing": "D",
+      "ftype": "sample",
+      "choices": null,
+      "required": null,
+      "allowable_field_types": [
+        {
+          "sample_type": "DNA Library",
+          "object_type": "Illuminated Fragment Library"
+        }
+      ]
     }
   ],
   "outputs": [],

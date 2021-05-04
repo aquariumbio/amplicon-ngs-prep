@@ -7,57 +7,65 @@
     {
       "operation": "initialize",
       "arguments": {
-        "operation_type_id": 795
+        "operation_type_id": 857
       },
-      "time": "2021-04-15T18:57:48.999+00:00"
+      "time": "2021-05-03T19:28:15.053+00:00"
     },
     {
       "operation": "display",
       "content": [
         {
-          "title": "Demo Table"
+          "title": "Metadata Table"
         },
         {
           "table": [
             [
               "item_id",
+              "basespace_name",
               "yeast_library",
               "protease",
               "protease_concentration",
               "sort_count",
               "frac_positive",
               "software_tube_id",
+              "concentration",
               "barcode"
             ],
             [
-              "<a href='#' onclick='open_item_ui(486207)'>486207</a>",
-              "COVID_RBD_SSM_bcov_4",
+              "<a href='#' onclick='open_item_ui(432266)'>432266</a>",
+              "<a href='#' onclick='open_item_ui(432266)'>432266</a>",
+              "Hugh Sept 2019",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "5.42",
+              "atcacg"
+            ],
+            [
+              "<a href='#' onclick='open_item_ui(432267)'>432267</a>",
+              "<a href='#' onclick='open_item_ui(432267)'>432267</a>",
+              "Hugh Sept 2019",
+              "Chymotrypsin",
+              "28",
+              "333600",
+              "0.0278",
+              "Tube - 5",
+              "12.6",
+              "cgatgt"
+            ],
+            [
+              "<a href='#' onclick='open_item_ui(432268)'>432268</a>",
+              "<a href='#' onclick='open_item_ui(432268)'>432268</a>",
+              "Hugh Sept 2019",
               "Trypsin",
-              "0",
-              "5500000",
-              "0.3232",
-              "Tube - 2",
-              "CATGGC"
-            ],
-            [
-              "<a href='#' onclick='open_item_ui(486208)'>486208</a>",
-              "COVID_RBD_SSM_bcov_4",
-              "SARS-CoV-2 S protein RBD (Acro), Trypsin",
-              "5, 0",
-              "1562399, 5500000",
-              "0.13019999999999998, 0.3232",
-              "Tube - 2",
-              "CATTTT"
-            ],
-            [
-              "<a href='#' onclick='open_item_ui(486209)'>486209</a>",
-              "COVID_RBD_SSM_bcov_4",
-              "SARS-CoV-2 S protein RBD (Acro), Trypsin",
-              "1, 0",
-              "1068000, 5500000",
-              "0.08900000000000001, 0.3232",
-              "Tube - 3, Tube - 2",
-              "CCAACA"
+              "28",
+              "242400",
+              "0.0202",
+              "Tube - 8",
+              "9.65",
+              "ttaggc"
             ]
           ]
         }
@@ -65,9 +73,9 @@
     },
     {
       "operation": "next",
-      "time": "2021-04-15T18:57:55.965+00:00",
+      "time": "2021-05-03T19:28:17.881+00:00",
       "inputs": {
-        "timestamp": 1618513075000
+        "timestamp": 1620070097000
       }
     },
     {
