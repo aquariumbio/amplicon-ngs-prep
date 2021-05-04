@@ -9,7 +9,7 @@ module GetMetadataHelper
   DNA_LIBRARY = 'DNA Library'
 
   def build_metadata_table(operation_histories:)
-    header = %w[item_id basespace_name] + metadata_keys.map(&:first) + %w[barcode]
+    header = %w[item_id] + metadata_keys.map(&:first) + %w[barcode]
     metadata_table = [header]
 
     operation_histories.each do |item_id, operation_history|
@@ -21,7 +21,6 @@ module GetMetadataHelper
 
   def build_row(item_id:, operation_history:)
     row = [Item.find(item_id).to_s]
-    row +=
     row += metadata_from_keys(operation_history: operation_history)
     row += barcode_from_primers(operation_history: operation_history)
     row

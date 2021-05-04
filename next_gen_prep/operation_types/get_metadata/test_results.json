@@ -9,7 +9,7 @@
       "arguments": {
         "operation_type_id": 857
       },
-      "time": "2021-05-03T19:28:15.053+00:00"
+      "time": "2021-05-04T12:54:30.401+00:00"
     },
     {
       "operation": "display",
@@ -21,7 +21,6 @@
           "table": [
             [
               "item_id",
-              "basespace_name",
               "yeast_library",
               "protease",
               "protease_concentration",
@@ -32,7 +31,6 @@
               "barcode"
             ],
             [
-              "<a href='#' onclick='open_item_ui(432266)'>432266</a>",
               "<a href='#' onclick='open_item_ui(432266)'>432266</a>",
               "Hugh Sept 2019",
               "",
@@ -45,7 +43,6 @@
             ],
             [
               "<a href='#' onclick='open_item_ui(432267)'>432267</a>",
-              "<a href='#' onclick='open_item_ui(432267)'>432267</a>",
               "Hugh Sept 2019",
               "Chymotrypsin",
               "28",
@@ -56,7 +53,6 @@
               "cgatgt"
             ],
             [
-              "<a href='#' onclick='open_item_ui(432268)'>432268</a>",
               "<a href='#' onclick='open_item_ui(432268)'>432268</a>",
               "Hugh Sept 2019",
               "Trypsin",
@@ -73,9 +69,9 @@
     },
     {
       "operation": "next",
-      "time": "2021-05-03T19:28:17.881+00:00",
+      "time": "2021-05-04T12:54:33.287+00:00",
       "inputs": {
-        "timestamp": 1620070097000
+        "timestamp": 1620132873000
       }
     },
     {
